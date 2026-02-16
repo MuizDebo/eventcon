@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGC EventCon 2026 | Sell Out Your Events With Creator Power</title>
+<meta name="description" content="The premier summit for event organizers ready to harness UGC and influencer marketing to fill every seat. Three transformative days in San Diego.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   RESET & FOUNDATIONS
+   ═══════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-deep: #060B18;
+  --bg-medium: #0B1222;
+  --bg-card: #0F1A2E;
+  --bg-card-hover: #142240;
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(255,120,60,0.35);
+  --text-primary: #F1F5F9;
+  --text-secondary: #8899AA;
+  --text-muted: #5A6A7A;
+  --coral: #FF6B35;
+  --coral-light: #FF8C5A;
+  --coral-dark: #E55A28;
+  --gold: #FFD166;
+  --gold-dark: #E5B84A;
+  --glass: rgba(11, 18, 34, 0.75);
+  --glass-border: rgba(255,255,255,0.06);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-full: 9999px;
+  --shadow-glow: 0 0 60px rgba(255,107,53,0.15);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ═══════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-tag {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background: rgba(255,107,53,0.12);
+  color: var(--coral);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(255,107,53,0.3);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,107,53,0.4); }
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.15); }
+.btn-outline {
+  background: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
+.btn-outline:hover { background: rgba(255,107,53,0.1); }
+
+/* ═══════════════════════════════════════════
+   NAVBAR — Glass panel style (AI Studio)
+   with scroll behavior (Lovable)
+   ═══════════════════════════════════════════ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: var(--glass);
+  backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom-color: var(--glass-border);
+  box-shadow: 0 1px 30px rgba(0,0,0,0.4);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+.nav-logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.nav-logo span.highlight { color: var(--coral); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text-primary); }
+.nav-cta {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 12px rgba(255,107,53,0.25);
+  transition: var(--transition);
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(255,107,53,0.35); }
+.nav-mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.nav-mobile-toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 76px; left: 0; right: 0;
+  background: var(--bg-medium);
+  border-bottom: 1px solid var(--border);
+  padding: 24px;
+  z-index: 99;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block;
+  padding: 14px 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu .mobile-cta-btn {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-mobile-toggle { display: flex; }
+}
+
+/* ═══════════════════════════════════════════
+   HERO — Bold typography (Lovable)
+   ═══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 24px 60px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 15%; left: 20%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,107,53,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: heroFloat 8s ease-in-out infinite;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 20%; right: 15%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,209,102,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: heroFloat 10s ease-in-out infinite reverse;
+}
+.hero-grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -40px); }
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease-out;
+}
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.hero-badge-item svg { color: var(--coral); }
+.hero-badge-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease-out 0.15s both;
+}
+.hero-title .line { display: block; }
+.hero-subtitle {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto 32px;
+  line-height: 1.75;
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+.hero-subtitle strong { color: var(--text-primary); font-weight: 600; }
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  animation: fadeUp 0.8s ease-out 0.45s both;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 520px;
+  margin: 0 auto;
+  animation: fadeUp 0.8s ease-out 0.6s both;
+}
+.hero-stat { text-align: center; }
+.hero-stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+}
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════
+   ABOUT — Image + Stats layout (AI Studio)
+   ═══════════════════════════════════════════ */
+.about {
+  padding: 96px 0;
+  background: var(--bg-deep);
+  position: relative;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.about-content p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.about-stat-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+.about-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+.about-image {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.about-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.about-image::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  border-radius: calc(var(--radius) + 4px);
+  opacity: 0.2;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-image { order: -1; }
+}
+
+/* ═══════════════════════════════════════════
+   VALUE PILLARS — 3 cards with hover glow (Lovable)
+   ═══════════════════════════════════════════ */
+.pillars {
+  padding: 96px 0;
+  background: var(--bg-medium);
+  position: relative;
+}
+.pillars::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(255,107,53,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.pillars-header { text-align: center; position: relative; z-index: 1; }
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.pillar-card {
+  position: relative;
+  padding: 40px 32px;
+  border-radius: var(--radius);
+  background: linear-gradient(to bottom, var(--bg-card), var(--bg-deep));
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  overflow: hidden;
+}
+.pillar-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+.pillar-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(255,107,53,0) 0%, rgba(255,107,53,0.06) 50%, rgba(255,107,53,0) 100%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+.pillar-card:hover::after { opacity: 1; }
+.pillar-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: rgba(255,107,53,0.1);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  transition: background 0.3s;
+}
+.pillar-card:hover .pillar-icon { background: rgba(255,107,53,0.18); }
+.pillar-icon svg { width: 28px; height: 28px; color: var(--coral); }
+.pillar-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.pillar-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════
+   PACKED VENUE IMAGE (Lovable)
+   ═══════════════════════════════════════════ */
+.packed-venue {
+  margin-top: 64px;
+  position: relative;
+  z-index: 1;
+}
+.packed-venue-img-wrapper {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-glow);
+}
+.packed-venue-img-wrapper img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+  .packed-venue-img-wrapper img { height: 280px; }
+}
+.packed-venue-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-medium) 5%, rgba(11,18,34,0.2) 50%, transparent 100%);
+}
+.packed-venue-text {
+  position: absolute;
+  bottom: 28px;
+  left: 0; right: 0;
+  text-align: center;
+  z-index: 2;
+}
+.packed-venue-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.packed-venue-sub {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.packed-venue-callout {
+  margin-top: 48px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.packed-venue-callout p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.packed-venue-callout strong {
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════
+   ═══════════════════════════════════════════ */
+.schedule {
+  padding: 96px 0;
+  background: var(--bg-deep);
+  position: relative;
+}
+.schedule-header { text-align: center; }
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.schedule-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  min-height: 400px;
+}
+.schedule-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+}
+.schedule-card-bg {
+  position: absolute;
+  inset: 0;
+}
+.schedule-card-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+.schedule-card:hover .schedule-card-bg img { opacity: 0.4; }
+.schedule-card-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-deep) 10%, rgba(6,11,24,0.85) 50%, rgba(6,11,24,0.5) 100%);
+}
+.schedule-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.schedule-vip-badge {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px 6px;
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  border-radius: 0 0 10px 10px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 3;
+}
+.schedule-day-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.schedule-day-badge.day1 { background: linear-gradient(135deg, var(--coral), var(--coral-light)); }
+.schedule-day-badge.day2 { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: #1a1a2e; }
+.schedule-day-badge.day3 { background: linear-gradient(135deg, var(--coral-dark), var(--coral)); }
+.schedule-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.schedule-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.schedule-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.schedule-tag {
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(4px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .schedule-grid { grid-template-columns: 1fr; }
+  .schedule-card { min-height: 360px; }
+}
+
+/* ═══════════════════════════════════════════
+   VENUE — Split layout (Lovable)
+   ═══════════════════════════════════════════ */
+.venue {
+  padding: 96px 0;
+  background: var(--bg-medium);
+  position: relative;
+}
+.venue::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,209,102,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.venue-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--coral);
+  margin-bottom: 8px;
+}
+.venue-info h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.venue-location {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.venue-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+.venue-features { margin-bottom: 32px; }
+.venue-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.venue-feature-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(255,107,53,0.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.venue-feature-icon svg { width: 20px; height: 20px; color: var(--coral); }
+.venue-feature strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+.venue-feature span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.venue-rate {
+  padding: 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(to bottom, var(--bg-card), var(--bg-deep));
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.venue-rate-label { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 6px; }
+.venue-rate-price {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.venue-image-wrapper {
+  position: relative;
+}
+.venue-gallery {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.venue-gallery-item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+.venue-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.venue-gallery-item:hover img {
+  transform: scale(1.06);
+}
+.venue-gallery-item.top-left {
+  height: 200px;
+}
+.venue-gallery-item.top-right {
+  height: 200px;
+}
+.venue-gallery-item.bottom {
+  height: 150px;
+}
+.venue-gallery-item.featured {
+  border: 2px solid var(--coral);
+}
+/* Override grid for bottom row: 3 items spanning full width */
+.venue-gallery {
+  grid-template-columns: 3fr 2fr;
+}
+.venue-gallery-item.bottom:nth-child(3) {
+  grid-column: auto;
+}
+/* Use a proper grid: top row 2 cols, bottom row 3 cols */
+.venue-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.venue-gallery-item.top-left {
+  grid-column: 1 / 4;
+  height: 200px;
+}
+.venue-gallery-item.top-right {
+  grid-column: 4 / 7;
+  height: 200px;
+}
+.venue-gallery-item.bottom:nth-child(3) {
+  grid-column: 1 / 3;
+  height: 150px;
+}
+.venue-gallery-item.bottom:nth-child(4) {
+  grid-column: 3 / 5;
+  height: 150px;
+}
+.venue-gallery-item.bottom:nth-child(5) {
+  grid-column: 5 / 7;
+  height: 150px;
+}
+@media (max-width: 500px) {
+  .venue-gallery-item.top-left,
+  .venue-gallery-item.top-right {
+    grid-column: 1 / -1;
+    height: 160px;
+  }
+  .venue-gallery-item.bottom:nth-child(3),
+  .venue-gallery-item.bottom:nth-child(4),
+  .venue-gallery-item.bottom:nth-child(5) {
+    grid-column: span 3;
+    height: 120px;
+  }
+}
+.venue-glow-1 {
+  position: absolute;
+  bottom: -30px; left: -30px;
+  width: 140px; height: 140px;
+  background: rgba(255,107,53,0.15);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+.venue-glow-2 {
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 100px; height: 100px;
+  background: rgba(255,209,102,0.12);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+@media (max-width: 768px) {
+  .venue-grid { grid-template-columns: 1fr; gap: 40px; }
+  .venue-image-wrapper { order: -1; }
+}
+
+/* ═══════════════════════════════════════════
+   SPEAKERS — Image-forward grid (AI Studio)
+   ═══════════════════════════════════════════ */
+.speakers {
+  padding: 96px 0;
+  background: var(--bg-deep);
+}
+.speakers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.speakers-header-left { max-width: 600px; }
+.speakers-link {
+  color: var(--coral);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s;
+}
+.speakers-link:hover { gap: 12px; }
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.speaker-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.speaker-card:hover { border-color: var(--border-hover); }
+.speaker-img-wrapper {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.speaker-img-wrapper img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: all 0.5s;
+}
+.speaker-card:hover .speaker-img-wrapper img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+.speaker-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-deep) 0%, rgba(6,11,24,0.3) 50%, transparent 100%);
+  pointer-events: none;
+}
+.speaker-card-info {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 2;
+}
+.speaker-card-info h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  transition: color 0.3s;
+}
+.speaker-card:hover .speaker-card-info h4 { color: var(--coral); }
+.speaker-card-info .company {
+  font-size: 0.75rem;
+  color: var(--coral-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+.speaker-card-info .role {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.speakers-note {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.speakers-note a { color: var(--coral); text-decoration: underline; text-decoration-color: rgba(255,107,53,0.3); }
+
+@media (max-width: 900px) { .speakers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .speakers-grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
+
+/* ═══════════════════════════════════════════
+   PRICING — Lovable visual + Claude excluded items
+   ═══════════════════════════════════════════ */
+.pricing {
+  padding: 96px 0;
+  background: var(--bg-medium);
+  position: relative;
+}
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(255,107,53,0.05) 0%, transparent 60%);
+  border-radius: 50%;
+}
+.pricing-header { text-align: center; position: relative; z-index: 1; }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 1;
+  align-items: stretch;
+}
+.pricing-card {
+  border-radius: var(--radius);
+  padding: 40px 28px;
+  background: linear-gradient(to bottom, var(--bg-card), var(--bg-deep));
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.pricing-card:hover {
+  border-color: var(--border-hover);
+}
+.pricing-card.featured {
+  background: linear-gradient(to bottom, rgba(255,107,53,0.12), var(--bg-card));
+  border: 2px solid var(--coral);
+  transform: scale(1.06);
+  box-shadow: var(--shadow-glow);
+  z-index: 2;
+  position: relative;
+}
+.pricing-popular-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pricing-card-header { text-align: center; margin-bottom: 32px; }
+.pricing-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.pricing-card-header .desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.pricing-price {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.pricing-features {
+  flex: 1;
+  margin-bottom: 28px;
+}
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.pricing-features li:last-child { border-bottom: none; }
+.pricing-check {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+}
+.pricing-check.included {
+  background: rgba(255,107,53,0.15);
+  color: var(--coral);
+}
+.pricing-card.featured .pricing-check.included {
+  background: var(--coral);
+  color: #fff;
+}
+.pricing-check.excluded {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-muted);
+}
+.pricing-features li.excluded { color: var(--text-muted); opacity: 0.5; }
+.pricing-card .btn { width: 100%; justify-content: center; padding: 14px 24px; }
+.pricing-note {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+.pricing-note strong { color: var(--coral); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .pricing-card.featured { transform: none; }
+}
+
+/* ═══════════════════════════════════════════
+   SPONSORSHIP — Tiered cards (Lovable)
+   ═══════════════════════════════════════════ */
+.sponsors {
+  padding: 96px 0;
+  background: var(--bg-deep);
+}
+.sponsors-header { text-align: center; }
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.sponsor-card {
+  padding: 28px 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(to bottom, var(--bg-card), var(--bg-deep));
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.sponsor-card:hover { border-color: var(--border-hover); }
+.sponsor-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+.sponsor-icon.platinum { background: linear-gradient(135deg, #C0C0C0, #E8E8E8); }
+.sponsor-icon.gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+.sponsor-icon.silver { background: linear-gradient(135deg, #8899AA, #B0B8C0); }
+.sponsor-icon.vendor { background: linear-gradient(135deg, var(--coral), var(--coral-light)); }
+.sponsor-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.sponsor-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.sponsor-card ul li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.sponsor-card ul li::before {
+  content: '•';
+  color: var(--coral);
+  flex-shrink: 0;
+  margin-top: -1px;
+}
+.sponsors-cta { text-align: center; }
+
+@media (max-width: 900px) { .sponsors-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .sponsors-grid { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   FINAL CTA — Impactful close (Lovable)
+   ═══════════════════════════════════════════ */
+.final-cta {
+  padding: 96px 0;
+  background: var(--bg-medium);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px; height: 500px;
+  background: radial-gradient(ellipse, rgba(255,107,53,0.08) 0%, transparent 60%);
+}
+.final-cta::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 350px;
+  background: radial-gradient(ellipse, rgba(255,209,102,0.06) 0%, transparent 60%);
+}
+.final-cta-content { position: relative; z-index: 1; }
+.final-cta-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(255,107,53,0.15);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 32px;
+  font-size: 1.6rem;
+}
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.final-cta p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.final-cta .btn-primary { font-size: 1rem; padding: 16px 36px; }
+.final-cta-email {
+  margin-top: 32px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.final-cta-email a { color: var(--coral); }
+.final-cta-email a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════════════
+   FOOTER — Newsletter + socials (AI Studio + Lovable)
+   ═══════════════════════════════════════════ */
+.footer {
+  background: var(--bg-deep);
+  border-top: 1px solid var(--border);
+  padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.footer-brand .nav-logo { margin-bottom: 16px; }
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.footer h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.footer-links-list li { margin-bottom: 10px; }
+.footer-links-list a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-links-list a:hover { color: var(--coral); }
+.footer-newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.footer-newsletter-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.footer-newsletter-form input:focus { border-color: var(--coral); }
+.footer-newsletter-form input::placeholder { color: var(--text-muted); }
+.footer-newsletter-form button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--coral);
+  color: #fff;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+.footer-newsletter-form button:hover { background: var(--coral-dark); }
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+.footer-social-link {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.3s;
+}
+.footer-social-link:hover {
+  background: var(--coral);
+  color: #fff;
+}
+.footer-social-link svg { width: 18px; height: 18px; }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-bottom p {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR — Glass panel (AI Studio) + scroll (Lovable)
+     ═══════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      UGC <span class="highlight">EventCon</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#venue">Venue</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#pricing">Tickets</a>
+      <a href="#sponsors">Sponsors</a>
+    </div>
+    <a href="#pricing" class="nav-cta">Get Tickets</a>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#venue">Venue</a>
+  <a href="#speakers">Speakers</a>
+  <a href="#pricing">Tickets</a>
+  <a href="#sponsors">Sponsors</a>
+  <a href="#pricing" class="mobile-cta-btn">Get Tickets</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO — Bold typography (Lovable)
+     ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-pattern"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Summer 2026
+      </div>
+      <div class="hero-badge-divider"></div>
+      <div class="hero-badge-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        San Diego, CA
+      </div>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line">SELL OUT</span>
+      <span class="line">YOUR EVENTS WITH</span>
+      <span class="line text-gradient">CREATOR POWER</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      The premier summit for event organizers ready to harness UGC and influencer marketing to fill every seat.
+      <strong>Three transformative days</strong> of strategy, networking, and results.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#pricing" class="btn btn-primary">
+        Reserve Your Spot
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#experience" class="btn btn-secondary">Explore the Experience</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-count="500" data-suffix="+">0</span>
+        <span class="hero-stat-label">Attendees</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-count="25" data-suffix="+">0</span>
+        <span class="hero-stat-label">Speakers</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-count="3" data-suffix="">0</span>
+        <span class="hero-stat-label">Days</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT — Image + Stats layout (AI Studio)
+     ═══════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <span class="section-tag">About The Event</span>
+        <h3>Where Creativity Meets <span class="text-gradient">Commerce</span></h3>
+        <p>UGC EventCon is more than just a conference — it's the annual gathering where event organizers discover how to leverage the creator economy to sell out every venue, every time.</p>
+        <p>From viral TikTok creators to CMOs of Fortune 500 companies, we bridge the gap between content creation and ticket sales strategy. This is the strategy Tony Robbins, Alex Hormozi, and major corporations already use — now accessible to everyone.</p>
+        <div class="about-stats">
+          <div><div class="about-stat-number" data-count="5000" data-suffix="+" data-separator=",">0</div><div class="about-stat-label">Attendees</div></div>
+          <div><div class="about-stat-number" data-count="150" data-suffix="+">0</div><div class="about-stat-label">Speakers</div></div>
+          <div><div class="about-stat-number" data-count="50" data-suffix="+">0</div><div class="about-stat-label">Workshops</div></div>
+          <div><div class="about-stat-number" data-count="3" data-suffix="">0</div><div class="about-stat-label">Epic Days</div></div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Main stage keynote at a major conference" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     VALUE PILLARS — 3 cards + hover glow (Lovable)
+     ═══════════════════════════════════════════ -->
+<section class="pillars" id="experience">
+  <div class="container">
+    <div class="pillars-header">
+      <span class="section-tag">The Opportunity</span>
+      <h2 class="section-title">Transform How You <span class="text-gradient">Fill Venues</span></h2>
+      <p class="section-subtitle">Event organizers aren't taking advantage of the creator economy. Learn directly from those who've mastered influencer-driven ticket sales.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2L12 12 17 17"/></svg>
+        </div>
+        <h3>Strategic Mastery</h3>
+        <p>Learn proven frameworks for partnering with creators. Master the art of influencer-driven ticket sales that major events have been using for years.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Elite Network</h3>
+        <p>Connect with fellow event organizers facing the same challenges. Meet influencers ready to help sell your events and forge lasting partnerships.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Cutting-Edge Tools</h3>
+        <p>Explore AI-powered solutions for event marketing. Get hands-on with EventCon and other event tech that automates creator partnerships.</p>
+      </div>
+    </div>
+
+    <!-- Packed Venue Image -->
+    <div class="packed-venue">
+      <div class="packed-venue-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80" alt="Packed convention hall with thousands of attendees" loading="lazy">
+        <div class="packed-venue-overlay"></div>
+        <div class="packed-venue-text">
+          <p class="packed-venue-title">This Could Be <span class="text-gradient">Your Event</span></p>
+          <p class="packed-venue-sub">Learn the strategies that fill venues like this — every single time.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Callout -->
+    <div class="packed-venue-callout">
+      <p><strong>Nobody else is doing this.</strong> This is the first event dedicated specifically to connecting event organizers with the creator economy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule Section -->
+<section class="schedule" id="schedule">
+  <div class="container">
+    <div class="schedule-header">
+      <span class="section-tag">The Agenda</span>
+      <h2 class="section-title">Three Days of <span class="text-gradient">Transformation</span></h2>
+      <p class="section-subtitle">Each day is designed to build on the last, taking you from strategy to implementation to mastery.</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <div class="schedule-card-bg">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=75" alt="Conference keynote stage" loading="lazy">
+        </div>
+        <div class="schedule-card-content">
+          <div class="schedule-day-badge day1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Day 1
+          </div>
+          <h3>Keynotes & Exhibit Hall</h3>
+          <p>Kick off with powerhouse keynotes from industry titans. Explore the immersive exhibit hall featuring 50+ event tech vendors and creator platforms.</p>
+          <div class="schedule-tags">
+            <span class="schedule-tag">Opening Keynote</span>
+            <span class="schedule-tag">Exhibit Hall</span>
+            <span class="schedule-tag">Strategy Sessions</span>
+            <span class="schedule-tag">Welcome Reception</span>
+          </div>
+        </div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-card-bg">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=75" alt="Yacht on the ocean at sunset" loading="lazy">
+        </div>
+        <div class="schedule-card-content">
+          <div class="schedule-day-badge day2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            Day 2
+          </div>
+          <h3>Deep Dives & Yacht Mixer</h3>
+          <p>Intensive workshops on influencer partnerships, UGC campaigns, and ROI optimization. Cap the night with an exclusive networking yacht mixer.</p>
+          <div class="schedule-tags">
+            <span class="schedule-tag">Workshops</span>
+            <span class="schedule-tag">Masterclasses</span>
+            <span class="schedule-tag">1-on-1 Meetings</span>
+            <span class="schedule-tag">Yacht Party</span>
+            <span class="schedule-tag">Ocean Networking</span>
+          </div>
+        </div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-vip-badge">ELITE PASS ONLY</div>
+        <div class="schedule-card-bg">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=75" alt="Luxury mansion estate" loading="lazy">
+        </div>
+        <div class="schedule-card-content" style="padding-top: 48px;">
+          <div class="schedule-day-badge day3">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"/></svg>
+            Day 3
+          </div>
+          <h3>VIP Mastermind at the Mansion</h3>
+          <p>An intimate, invite-only experience at a stunning mansion. Connect with elite event organizers, share strategies, and forge partnerships.</p>
+          <div class="schedule-tags">
+            <span class="schedule-tag">Private Mansion</span>
+            <span class="schedule-tag">Elite Roundtables</span>
+            <span class="schedule-tag">Gourmet Experience</span>
+            <span class="schedule-tag">Action Planning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     VENUE — Split layout (Lovable)
+     ═══════════════════════════════════════════ -->
+<section class="venue" id="venue">
+  <div class="container">
+    <div class="venue-grid">
+      <div class="venue-info">
+        <h3>The Venue</h3>
+        <h2>Legacy Hotel & Resort</h2>
+        <p class="venue-location text-gradient">San Diego, California</p>
+        <p class="venue-description">The Legacy Hotel & Resort sets the perfect backdrop for transformation. With state-of-the-art conference facilities, world-class amenities, and the stunning San Diego coastline, you'll be inspired from arrival to departure.</p>
+
+        <div class="venue-features">
+          <div class="venue-feature">
+            <div class="venue-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><strong>Prime Location</strong><span>1234 Coastal Drive, San Diego CA 92101</span></div>
+          </div>
+          <div class="venue-feature">
+            <div class="venue-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="22" x2="9" y2="2"/><line x1="15" y1="22" x2="15" y2="2"/></svg></div>
+            <div><strong>World-Class Facilities</strong><span>50,000 sq ft of flexible meeting space</span></div>
+          </div>
+          <div class="venue-feature">
+            <div class="venue-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s2-4 5-4 5 4 5 4 2-4 5-4 5 4 5 4"/><path d="M2 20s2-4 5-4 5 4 5 4 2-4 5-4 5 4 5 4"/></svg></div>
+            <div><strong>Resort Amenities</strong><span>Pool, spa, fine dining, and ocean views</span></div>
+          </div>
+          <div class="venue-feature">
+            <div class="venue-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12" y2="20"/></svg></div>
+            <div><strong>Business Ready</strong><span>Valet parking, high-speed WiFi, on-site catering</span></div>
+          </div>
+        </div>
+
+        <div class="venue-rate">
+          <p class="venue-rate-label">Special Attendee Room Rate</p>
+          <p class="venue-rate-price">Starting at <span class="text-gradient">$279</span>/night</p>
+        </div>
+        <a href="#" class="btn btn-primary">Book Your Room</a>
+      </div>
+      <div class="venue-image-wrapper">
+        <div class="venue-gallery">
+          <div class="venue-gallery-item top-left">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Resort main building with pool" loading="lazy">
+          </div>
+          <div class="venue-gallery-item top-right">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=80" alt="Poolside sunset lounge" loading="lazy">
+          </div>
+          <div class="venue-gallery-item bottom">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80" alt="Hotel lobby" loading="lazy">
+          </div>
+          <div class="venue-gallery-item bottom featured">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80" alt="Tropical resort pool" loading="lazy">
+          </div>
+          <div class="venue-gallery-item bottom">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80" alt="Resort pool at dusk" loading="lazy">
+          </div>
+        </div>
+        <div class="venue-glow-1"></div>
+        <div class="venue-glow-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SPEAKERS — Image-forward grid (AI Studio)
+     ═══════════════════════════════════════════ -->
+<section class="speakers" id="speakers">
+  <div class="container">
+    <div class="speakers-header">
+      <div class="speakers-header-left">
+        <span class="section-tag">Learn From The Best</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Speakers</span></h2>
+        <p style="color: var(--text-secondary); max-width: 480px;">Learn from the visionaries shaping the digital landscape and the creator economy.</p>
+      </div>
+      <a href="#" class="speakers-link">View All Speakers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="speakers-grid">
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Sarah Jenkins" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>Sarah Jenkins</h4><p class="company">TikTok</p><p class="role">Head of Creator Success</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="David Chen" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>David Chen</h4><p class="company">YouTube</p><p class="role">Chief Strategy Officer</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80" alt="Amara Okeke" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>Amara Okeke</h4><p class="company">Freelance</p><p class="role">Viral Content Consultant</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Marcus Johnson" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>Marcus Johnson</h4><p class="company">Spotify</p><p class="role">VP of Marketing</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="Elena Rodriguez" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>Elena Rodriguez</h4><p class="company">Instagram</p><p class="role">Director of Partnerships</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="James Wilson" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>James Wilson</h4><p class="company">CreatorDAO</p><p class="role">Founder</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80" alt="Anita Patel" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>Anita Patel</h4><p class="company">The Verge</p><p class="role">Tech Journalist</p></div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img-wrapper"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80" alt="Robert Fox" loading="lazy"></div>
+        <div class="speaker-card-overlay"></div>
+        <div class="speaker-card-info"><h4>Robert Fox</h4><p class="company">Capital Ventures</p><p class="role">Angel Investor</p></div>
+      </div>
+    </div>
+    <p class="speakers-note">Speaker applications are currently open. <a href="#">Apply to speak</a></p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PRICING — Lovable visual + Claude excluded items UX
+     ═══════════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <span class="section-tag">Invest in Your Events</span>
+      <h2 class="section-title">Choose Your <span class="text-gradient">Experience</span></h2>
+      <p class="section-subtitle">Every pass includes access to world-class content. Pick the level of networking and VIP access that fits your goals.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Standard -->
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <h3>Standard Pass</h3>
+          <p class="desc">Perfect for first-time attendees</p>
+          <div class="pricing-price">$797</div>
+        </div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check included">✓</span> Day 1–2 Access</li>
+          <li><span class="pricing-check included">✓</span> All Keynotes & Workshops</li>
+          <li><span class="pricing-check included">✓</span> Exhibit Hall Access</li>
+          <li><span class="pricing-check included">✓</span> Basic Networking</li>
+          <li><span class="pricing-check included">✓</span> Digital Resources</li>
+          <li class="excluded"><span class="pricing-check excluded">✗</span> Yacht Mixer</li>
+          <li class="excluded"><span class="pricing-check excluded">✗</span> VIP Mansion Day</li>
+        </ul>
+        <a href="#" class="btn btn-secondary" style="justify-content:center;">Select Standard</a>
+      </div>
+
+      <!-- All-Access (Featured) -->
+      <div class="pricing-card featured">
+        <div class="pricing-popular-badge">⭐ MOST POPULAR</div>
+        <div class="pricing-card-header">
+          <h3>All-Access Pass</h3>
+          <p class="desc">Our most popular experience</p>
+          <div class="pricing-price">$1,497</div>
+        </div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check included">✓</span> Day 1–3 Access</li>
+          <li><span class="pricing-check included">✓</span> All Keynotes & Workshops</li>
+          <li><span class="pricing-check included">✓</span> Yacht Mixer Included</li>
+          <li><span class="pricing-check included">✓</span> Priority Seating</li>
+          <li><span class="pricing-check included">✓</span> Speaker Meet & Greets</li>
+          <li><span class="pricing-check included">✓</span> Workshop Materials</li>
+          <li class="excluded"><span class="pricing-check excluded">✗</span> VIP Mansion Day</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="justify-content:center;">Select All-Access</a>
+      </div>
+
+      <!-- Elite -->
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <h3>Elite Pass</h3>
+          <p class="desc">The ultimate transformation</p>
+          <div class="pricing-price">$2,997</div>
+        </div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check included">✓</span> All 3 Days Access</li>
+          <li><span class="pricing-check included">✓</span> All Keynotes & Workshops</li>
+          <li><span class="pricing-check included">✓</span> Yacht Mixer Included</li>
+          <li><span class="pricing-check included">✓</span> VIP Mansion Mastermind</li>
+          <li><span class="pricing-check included">✓</span> Private Mastermind Access</li>
+          <li><span class="pricing-check included">✓</span> 1-on-1 Mentor Sessions</li>
+          <li><span class="pricing-check included">✓</span> VIP Concierge Service</li>
+        </ul>
+        <a href="#" class="btn btn-secondary" style="justify-content:center;">Select Elite</a>
+      </div>
+    </div>
+    <p class="pricing-note"><strong>Early bird pricing</strong> ends soon. Prices increase by $200 after deadline.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SPONSORSHIP — Tiered cards (Lovable)
+     ═══════════════════════════════════════════ -->
+<section class="sponsors" id="sponsors">
+  <div class="container">
+    <div class="sponsors-header">
+      <span class="section-tag">Partnership Opportunities</span>
+      <h2 class="section-title">Sponsorship & <span class="text-gradient">Vendor</span> Opportunities</h2>
+      <p class="section-subtitle">Get your brand in front of 500+ decision-makers in the events industry. Limited sponsorship spots available.</p>
+    </div>
+    <div class="sponsors-grid">
+      <div class="sponsor-card">
+        <div class="sponsor-icon platinum">💎</div>
+        <h3>Platinum Sponsor</h3>
+        <p class="sponsor-price text-gradient">$50,000</p>
+        <ul>
+          <li>Main stage naming rights</li>
+          <li>Keynote speaking slot</li>
+          <li>Premium exhibit location</li>
+          <li>All marketing materials</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-icon gold">🏆</div>
+        <h3>Gold Sponsor</h3>
+        <p class="sponsor-price text-gradient">$25,000</p>
+        <ul>
+          <li>Prime exhibit space</li>
+          <li>Panel participation</li>
+          <li>Branded break sponsor</li>
+          <li>Attendee list access</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-icon silver">🥈</div>
+        <h3>Silver Sponsor</h3>
+        <p class="sponsor-price text-gradient">$10,000</p>
+        <ul>
+          <li>Standard exhibit space</li>
+          <li>Logo on materials</li>
+          <li>Social media mentions</li>
+          <li>Networking access</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-icon vendor">🏪</div>
+        <h3>Vendor Booth</h3>
+        <p class="sponsor-price text-gradient">$3,500</p>
+        <ul>
+          <li>10×10 booth space</li>
+          <li>Logo listing</li>
+          <li>Company listing</li>
+          <li>Networking access</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sponsors-cta">
+      <a href="#" class="btn btn-primary">Download Sponsorship Info <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA (Lovable)
+     ═══════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-content">
+      <div class="final-cta-icon">✨</div>
+      <h2>Ready to Sell Out Your <span class="text-gradient">Next Event?</span></h2>
+      <p>Join 500+ event organizers transforming how they fill venues. The creator economy is waiting.</p>
+      <a href="#pricing" class="btn btn-primary">
+        Get Your Tickets Now
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <p class="final-cta-email">Questions? Contact us at <a href="mailto:hello@ugceventcon.com">hello@ugceventcon.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER — Newsletter (AI Studio) + Socials (Lovable)
+     ═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom: 16px; display: inline-flex;">
+          <div class="nav-logo-icon">⚡</div>
+          UGC <span class="highlight">EventCon</span>
+        </a>
+        <p>The premier summit connecting event organizers with the creator economy.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#pricing">Tickets</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay Updated</h4>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">→</button>
+        </form>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 UGC EventCon. All rights reserved.</p>
+      <p>San Diego, CA · Summer 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Intersection Observer for fade-in animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.pillar-card, .schedule-card, .speaker-card, .pricing-card, .sponsor-card, .packed-venue, .venue-gallery-item').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = `opacity 0.6s ease ${i * 0.08}s, transform 0.6s ease ${i * 0.08}s`;
+  observer.observe(el);
+});
+
+// Count-up animation for stat numbers
+function animateCount(el) {
+  const target = parseInt(el.getAttribute('data-count'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  const useSeparator = el.hasAttribute('data-separator');
+  const duration = 2000;
+  const startTime = performance.now();
+
+  function easeOutExpo(t) {
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeOutExpo(progress);
+    const current = Math.round(easedProgress * target);
+
+    let display = current.toString();
+    if (useSeparator) {
+      display = current.toLocaleString();
+    }
+    el.textContent = display + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+  requestAnimationFrame(update);
+}
+
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      entry.target.classList.add('counted');
+      animateCount(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(el => {
+  countObserver.observe(el);
+});
+</script>
+</body>
+</html>
