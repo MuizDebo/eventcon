@@ -130,6 +130,92 @@ ul { list-style: none; }
    NAVBAR — Glass panel style (AI Studio)
    with scroll behavior (Lovable)
    ═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════
+   COUNTDOWN BANNER
+   ═══════════════════════════════════════════ */
+.countdown-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 101;
+  background: linear-gradient(90deg, var(--coral-dark), var(--coral), var(--gold-dark), var(--coral));
+  background-size: 300% 100%;
+  animation: bannerShimmer 6s ease-in-out infinite;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+@keyframes bannerShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.countdown-banner-text {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.countdown-banner-text .pulse-dot {
+  width: 8px; height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulseDot 1.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.countdown-timer {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.25);
+  border-radius: 6px;
+  padding: 4px 8px;
+  min-width: 44px;
+}
+.countdown-number {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+.countdown-label {
+  font-size: 0.55rem;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+.countdown-separator {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.countdown-banner-live {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
+/* Push nav down by banner height — set dynamically via JS */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -209,7 +295,7 @@ ul { list-style: none; }
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 76px; left: 0; right: 0;
+  top: 0; left: 0; right: 0;
   background: var(--bg-medium);
   border-bottom: 1px solid var(--border);
   padding: 24px;
@@ -251,7 +337,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 100px 24px 60px;
+  padding: 140px 24px 60px;
 }
 .hero-bg {
   position: absolute;
@@ -1376,8 +1462,14 @@ section {
 @media (max-width: 900px) {
   .container { padding: 0 20px; }
 
+  /* Banner */
+  .countdown-banner { padding: 8px 16px; gap: 12px; }
+  .countdown-banner-text { font-size: 0.8rem; }
+  .countdown-unit { min-width: 40px; padding: 3px 6px; }
+  .countdown-number { font-size: 0.9rem; }
+
   /* Hero */
-  .hero { padding: 90px 20px 48px; min-height: 100svh; }
+  .hero { padding: 130px 20px 48px; min-height: 100svh; }
   .hero-content { max-width: 100%; }
   .hero-title { font-size: clamp(1.8rem, 5.5vw, 3.2rem); margin-bottom: 20px; }
   .hero-subtitle { font-size: 0.95rem; margin-bottom: 28px; }
@@ -1435,6 +1527,20 @@ section {
 @media (max-width: 600px) {
   .container { padding: 0 16px; }
 
+  /* Banner */
+  .countdown-banner {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 12px;
+  }
+  .countdown-banner-text { font-size: 0.75rem; gap: 6px; }
+  .countdown-timer { gap: 4px; }
+  .countdown-unit { min-width: 38px; padding: 3px 5px; }
+  .countdown-number { font-size: 0.85rem; }
+  .countdown-label { font-size: 0.5rem; }
+  .countdown-separator { font-size: 0.85rem; margin-bottom: 8px; }
+  .countdown-banner-live { font-size: 0.65rem; }
+
   /* Global text sizing */
   .section-tag { font-size: 0.72rem; padding: 6px 14px; margin-bottom: 16px; }
   .section-title { font-size: 1.5rem; margin-bottom: 12px; }
@@ -1445,10 +1551,9 @@ section {
   .nav-inner { height: 60px; }
   .nav-logo { font-size: 1.05rem; gap: 8px; }
   .nav-logo-icon { width: 28px; height: 28px; font-size: 0.85rem; border-radius: 8px; }
-  .mobile-menu { top: 60px; }
 
   /* Hero - critical for mobile fit */
-  .hero { padding: 72px 16px 36px; }
+  .hero { padding: 130px 16px 36px; }
   .hero-badge { 
     flex-wrap: wrap; 
     justify-content: center; 
@@ -1594,7 +1699,13 @@ section {
 
 /* ---- Small phones (max 380px) ---- */
 @media (max-width: 380px) {
-  .hero { padding: 68px 12px 32px; }
+  .countdown-banner { padding: 6px 10px; gap: 4px; }
+  .countdown-banner-text { font-size: 0.68rem; }
+  .countdown-unit { min-width: 34px; padding: 2px 4px; }
+  .countdown-number { font-size: 0.78rem; }
+  .countdown-label { font-size: 0.45rem; }
+  .countdown-separator { font-size: 0.78rem; margin-bottom: 6px; }
+  .hero { padding: 125px 12px 32px; }
   .hero-title { font-size: 7.5vw; }
   .hero-subtitle { font-size: 0.82rem; }
   .hero-stat-number { font-size: 1.2rem; }
@@ -1617,6 +1728,38 @@ section {
 </style>
 </head>
 <body>
+
+<!-- ═══════════════════════════════════════════
+     COUNTDOWN BANNER
+     ═══════════════════════════════════════════ -->
+<div class="countdown-banner" id="countdownBanner">
+  <div class="countdown-banner-text">
+    <span class="pulse-dot"></span>
+    Ticket Sales Coming Soon
+  </div>
+  <div class="countdown-timer" id="countdownTimer">
+    <div class="countdown-unit">
+      <span class="countdown-number" id="cdDays">00</span>
+      <span class="countdown-label">Days</span>
+    </div>
+    <span class="countdown-separator">:</span>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="cdHours">00</span>
+      <span class="countdown-label">Hrs</span>
+    </div>
+    <span class="countdown-separator">:</span>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="cdMins">00</span>
+      <span class="countdown-label">Min</span>
+    </div>
+    <span class="countdown-separator">:</span>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="cdSecs">00</span>
+      <span class="countdown-label">Sec</span>
+    </div>
+  </div>
+  <span class="countdown-banner-live">Live March 1st</span>
+</div>
 
 <!-- ═══════════════════════════════════════════
      NAVBAR — Glass panel (AI Studio) + scroll (Lovable)
@@ -2274,6 +2417,55 @@ const countObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-count]').forEach(el => {
   countObserver.observe(el);
 });
+// Dynamic banner → nav → menu offset
+const banner = document.getElementById('countdownBanner');
+const navEl = document.getElementById('nav');
+const mobileMenuEl = document.getElementById('mobileMenu');
+
+function syncBannerOffsets() {
+  const bannerH = banner.offsetHeight;
+  const navH = navEl.offsetHeight;
+  navEl.style.top = bannerH + 'px';
+  mobileMenuEl.style.top = (bannerH + navH) + 'px';
+}
+syncBannerOffsets();
+window.addEventListener('resize', syncBannerOffsets);
+// Re-sync after fonts load (can shift heights)
+window.addEventListener('load', syncBannerOffsets);
+
+// Countdown Timer — March 1st, 2026
+const targetDate = new Date('2026-03-01T00:00:00').getTime();
+const cdDays = document.getElementById('cdDays');
+const cdHours = document.getElementById('cdHours');
+const cdMins = document.getElementById('cdMins');
+const cdSecs = document.getElementById('cdSecs');
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    cdDays.textContent = '00';
+    cdHours.textContent = '00';
+    cdMins.textContent = '00';
+    cdSecs.textContent = '00';
+    document.querySelector('.countdown-banner-text').innerHTML = '<span class="pulse-dot"></span> Ticket Sales Are LIVE!';
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  cdDays.textContent = String(days).padStart(2, '0');
+  cdHours.textContent = String(hours).padStart(2, '0');
+  cdMins.textContent = String(mins).padStart(2, '0');
+  cdSecs.textContent = String(secs).padStart(2, '0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
